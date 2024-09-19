@@ -1,5 +1,5 @@
 "use client";
-
+import logoImg from "./logo.png";
 import React, {useState} from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
@@ -29,13 +29,17 @@ export default function Navbar (){
         <div 
             className="navbar" 
             style={{ 
+                position: "fixed",
+                width: "100vw",
+                zIndex: 1000,
+                boxSizing: "border-box",
                 display: "flex", 
                 justifyContent: "space-between", 
                 alignItems: "center", 
                 padding: "20px", 
             }}
         >
-            <Image src="/.logo.png" alt="logo" width={100} height={40}/>
+            <Image src={logoImg} alt="logo" width={100} height={40}/>
             <div className="navbar-tabs" style={{ display: "flex", gap: "16px" }}>
                 <CustomTab  label="Publications" onClick={() => navigateTo('/publications')}/>
                 <CustomTab label="EH4S Platform" onClick={() => navigateTo('/eh4s')}/>
@@ -46,7 +50,7 @@ export default function Navbar (){
                     open={isAboutMenuOpen}
                     onClose={handleAboutMenuClose}
                 >
-                    <MenuItem onClick={() => navigateTo('/about/who-we-are')}>Who We Are</MenuItem>
+                    <MenuItem onClick={() => navigateTo('/')}>Who We Are</MenuItem>
                     <MenuItem onClick={() => navigateTo('/about/what-we-do')}>What We Do</MenuItem>
                     <MenuItem onClick={() => navigateTo('/about/how-we-work')}>How We Work</MenuItem>
                     <MenuItem onClick={() => navigateTo('/about/events-activities')}>Events & Activities</MenuItem>

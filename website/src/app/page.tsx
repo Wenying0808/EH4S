@@ -2,19 +2,34 @@
 
 import Navbar from "./components/navbar/navbar";
 import colors from "./styles/colors";
+import Placeholder from "./components/placeholder/placeholder";
 
 export default function Home() {
-  return (
-    <div className="Home" 
-      style={{ 
-        backgroundColor: colors.calypso,
-        margin: 0,
-        padding: 0,
-        height: "100vh",
-      }}
+  return(
+    <div
+        style={{ 
+            margin: 0,
+            padding: 0,
+            height: "100vh",
+            overflow: 'hidden'
+        }}
     >
-      <Navbar/>
-      Container
+        <Navbar/>
+        <div className="page-container"
+            style={{
+                position: "absolute",
+                top: "80px",
+                height: "calc(100vh - 80px)",
+                width: "100vw",
+                backgroundColor: colors.white,
+
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+            }}
+        >
+            <Placeholder label="Home"/>
+        </div>
     </div>
   );
 }

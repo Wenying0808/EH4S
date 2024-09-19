@@ -2,7 +2,7 @@ import colors from "@/app/styles/colors";
 import Navbar from "@/app/components/navbar/navbar";
 import Placeholder from "@/app/components/placeholder/placeholder";
 
-export default function WhatWeDo() {
+export default function EventsActivities() {
     return(
         <div
             style={{ 
@@ -26,7 +26,7 @@ export default function WhatWeDo() {
                     alignItems: "center",
                 }}
             >
-                <Placeholder label="What We Do"/>
+                <Placeholder label="Events & Activities"/>
             </div>
         </div>
     );
