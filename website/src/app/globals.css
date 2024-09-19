@@ -8,12 +8,6 @@
   --calypso-color: #33658A;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 html,
 body {
@@ -40,8 +34,43 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.page{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.page-container{
+  position: absolute;
+  top: 80px;
+  height: calc(100vh - 80px);
+  width: 100vw;
+  background-color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+      padding: 20px;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+  }
+  .page-container{
+    top: 178px;
+    height: calc(100vh - 178px);
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar-tabs {
+      display: none;
+  }
+
+  .navbar-buttons {
+      gap: 10px;
   }
 }

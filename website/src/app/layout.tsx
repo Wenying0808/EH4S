@@ -1,4 +1,5 @@
 import colors from "./styles/colors";
+import "./globals.css";
 
 export const metadata = {
   title: 'Next.js',

@@ -1,11 +1,12 @@
 "use client";
-import logoImg from "./logo.png";
+import logoImg from "./img_logo.png";
 import React, {useState} from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import CustomButton from '../basic-button/customButton';
 import CustomTab from '../nav-tab/customTab';
 import { Menu, MenuItem } from '@mui/material';
+import '../../../app/globals.css';
 
 export default function Navbar (){
     const router = useRouter();
@@ -39,7 +40,7 @@ export default function Navbar (){
                 padding: "20px", 
             }}
         >
-            <Image src={logoImg} alt="logo" width={100} height={40}/>
+            <Image src={logoImg} alt="logo" width={160} height={40}/>
             <div className="navbar-tabs" style={{ display: "flex", gap: "16px" }}>
                 <CustomTab  label="Publications" onClick={() => navigateTo('/publications')}/>
                 <CustomTab label="EH4S Platform" onClick={() => navigateTo('/eh4s')}/>
