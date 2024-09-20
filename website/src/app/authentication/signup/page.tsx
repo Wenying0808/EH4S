@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import colors from '@/app/styles/colors';
 import { TextField, Button, Box, Typography } from '@mui/material';
 import { useRouter } from 'next/navigation';
+import GoogleIcon from '@mui/icons-material/Google';
+import MicrosoftIcon from '@mui/icons-material/Microsoft';
 
 export default function SignUp(){
   const [company, setCompany] = useState('');
@@ -27,13 +29,13 @@ export default function SignUp(){
       <Box 
         sx={{ 
           maxWidth: 320, 
-          margin: 'auto', 
           mt: 4, 
           padding: "20px", 
           backgroundColor: colors.white, 
           borderRadius: "10px",
-
-        }}>
+          boxShadow: "0px 3px 30px 0px rgba(0, 0, 0, 0.25)",
+        }}
+      >
         <Typography variant="h4" gutterBottom>Sign Up</Typography>
         <TextField
           fullWidth
@@ -55,6 +57,7 @@ export default function SignUp(){
           onClick={handleGoogleSignUp}
           disabled={!isFormFilled}
           sx={{ mt: 2 , backgroundColor: colors.calypso }}
+          startIcon={<GoogleIcon />}
         >
           Connect with Gmail
         </Button>
@@ -63,7 +66,8 @@ export default function SignUp(){
           variant="contained"
           onClick={handleMicrosoftSignUp}
           disabled={!isFormFilled}
-          sx={{ mt: 2, backgroundColor: colors.calypso  }}
+          sx={{ mt: 2, backgroundColor: colors.calypso }}
+          startIcon={<MicrosoftIcon />}
         >
           Connect with Microsoft
         </Button>

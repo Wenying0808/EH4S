@@ -4,6 +4,8 @@ import React from 'react';
 import colors from '@/app/styles/colors';
 import { Button, Box, Typography } from '@mui/material';
 import { useRouter } from 'next/navigation';
+import GoogleIcon from '@mui/icons-material/Google';
+import MicrosoftIcon from '@mui/icons-material/Microsoft';
 
 export default function SignIn(){
   const router = useRouter();
@@ -23,11 +25,11 @@ export default function SignIn(){
         <Box 
             sx={{ 
                 maxWidth: 320, 
-                margin: 'auto', 
                 mt: 4, 
                 padding: "20px", 
                 backgroundColor: colors.white, 
                 borderRadius: "10px",
+                boxShadow: "0px 3px 30px 0px rgba(0, 0, 0, 0.25)",
             }}
         >
         <Typography variant="h4" gutterBottom>Sign In</Typography>
@@ -35,7 +37,8 @@ export default function SignIn(){
             fullWidth
             variant="contained"
             onClick={handleGoogleSignIn}
-            sx={{ mt: 2, backgroundColor: colors.calypso  }}
+            sx={{ mt: 2, backgroundColor: colors.calypso }}
+            startIcon={<GoogleIcon />}
         >
             Connect with Gmail
         </Button>
@@ -43,7 +46,8 @@ export default function SignIn(){
             fullWidth
             variant="contained"
             onClick={handleMicrosoftSignIn}
-            sx={{ mt: 2, backgroundColor: colors.calypso  }}
+            sx={{ mt: 2, backgroundColor: colors.calypso }}
+            startIcon={<MicrosoftIcon />}
         >
             Connect with Microsoft
         </Button>
