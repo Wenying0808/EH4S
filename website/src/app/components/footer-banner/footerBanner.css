@@ -5,7 +5,7 @@
     justify-content: center;
     gap: 30px;
     padding: 30px;
-    background-color: var(--calypso-color);
+    background-color: var(--calypso-darker-color);
     color: var(--white-color);
 }
 

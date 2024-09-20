@@ -1,6 +1,7 @@
 import Navbar from "@/app/components/navbar/navbar";
 import IntroCard from "@/app/components/intro-card/introCard";
 import FooterBanner from "@/app/components/footer-banner/footerBanner";
+import Footer from "@/app/components/footer/footer";
 import { introCardData } from "@/app/data/introcard-data";
 
 export default function WhatWeDo() {
@@ -29,6 +30,7 @@ export default function WhatWeDo() {
                     ))}
                 </div> 
                 <FooterBanner/>
+                <Footer/>
             </div>
         </div>
     );

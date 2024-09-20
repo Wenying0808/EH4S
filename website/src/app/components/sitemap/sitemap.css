@@ -1,0 +1,32 @@
+.sitemap-column{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+.sitemap-column-header{
+    display: flex;
+    padding: 16px 0px;
+    align-items: center;
+    border-bottom: 2px solid var(--highlight-color);
+
+    color: var(--white-color);
+    font-family: "Roboto Slab";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px;
+}
+.sitemap-column-tabs{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.sitemap-column-tab{
+    display: flex;
+    padding: 8px 0px;
+    align-items: center;
+}
+.sitemap-column-tab-label{
+    color: var(--white-color);
+}
