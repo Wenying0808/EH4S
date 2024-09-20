@@ -82,6 +82,13 @@ hr {
   gap: 40px;
   flex-wrap: wrap;
 }
+.section-map{
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-items: center;
+  background-color: var(--calypso-darker-color);
+}
 
 
  /* section component across website*/
