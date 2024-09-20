@@ -20,7 +20,7 @@ export default function Placeholder({label}: PlaceholderProps) {
             }}
         >
             <Image src={placeholderImg} alt="placholder" width={280} height={280}/>
-            <Typography component="h3" sx={{ color: colors.secondaryGray}}>{label} is under construction.</Typography>
+            <Typography component="h3" sx={{ color: colors.secondaryGray}}>{label} Page Placeholder</Typography>
         </div>
     );
 }

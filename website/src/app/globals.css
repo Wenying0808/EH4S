@@ -81,23 +81,19 @@ a{
     top: 178px;
     height: calc(100vh - 178px);
   }
-
-  /* section component*/
-  .section{
-    flex-direction: column !important;
+  .section-title{
+    font-size: 40px;
+    line-height: 44px; 
   }
-  .section-img{
-    justify-content: flex-start !important;
-  }
-  .section-description{
-    width: 300px !important;
-  }
-
 }
 
 @media (max-width: 520px) {
   .page-container{
     top: 220px;
     height: calc(100vh - 220px);
+  }
+  .section-title{
+    font-size: 36px;
+    line-height: 48px; 
   }
 }

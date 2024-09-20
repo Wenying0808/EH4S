@@ -1,0 +1,22 @@
+@media (max-width: 900px) {
+    .section{
+      flex-direction: column !important;
+      align-items: center !important;
+    }
+    .section-img{
+      justify-content: flex-start !important;
+      max-width: 400px !important;
+    }
+    .section-intro{
+        max-width: 400px !important;
+    }
+}
+
+@media (max-width: 520px) {
+    .section-img{
+      max-width: 300px !important;
+    }
+    .section-intro{
+        max-width: 300px !important;
+    }
+}
