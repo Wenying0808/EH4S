@@ -2,7 +2,7 @@
 
 import "./navbar.css";
 import logoImg from "./img_logo.png";
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import CustomButton from '../basic-button/customButton';
@@ -14,6 +14,17 @@ export default function Navbar (){
     const router = useRouter();
     const [aboutMenuAnchor, setAboutMenuAnchor] = useState<null | HTMLElement>(null);
     const isAboutMenuOpen = Boolean(aboutMenuAnchor);
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+    useEffect(() => {
+        // Check authentication status on component mount
+        checkAuthStatus();
+    }, []);
+
+    const checkAuthStatus = () => {
+        const token = localStorage.getItem('authToken');
+        setIsAuthenticated(!!token);
+    };
 
     const handleAboutMenuClick = (event: React.MouseEvent<HTMLElement>) => {
         setAboutMenuAnchor(event.currentTarget);
@@ -26,6 +37,19 @@ export default function Navbar (){
     const navigateTo = (path: string) => {
         router.push(path);
         handleAboutMenuClose();
+    };
+
+    const handleSignUp = () => {
+        navigateTo('/authentication/signup');
+    };
+
+    const handleSignIn = () => {
+        navigateTo('/authentication/signin');
+    };
+
+    const handleSignOut = () => {
+        localStorage.removeItem('authToken');
+        setIsAuthenticated(false);
     };
 
     return (
@@ -62,8 +86,14 @@ export default function Navbar (){
             </div>
                 
             <div className="navbar-buttons" style={{ display: "flex", gap: "20px"}}>
-                <CustomButton label="Sign Up" variant="contained"/>
-                <CustomButton label="Sign In" variant="outlined"/>
+                {!isAuthenticated ? (
+                    <>
+                        <CustomButton label="Sign Up" variant="contained" onClick={handleSignUp}/>
+                        <CustomButton label="Sign In" variant="outlined" onClick={handleSignIn}/>
+                    </>
+                ) : (
+                    <CustomButton label="Sign Out" variant="outlined" onClick={handleSignOut}/>
+                )}
             </div>
         </div>
     );

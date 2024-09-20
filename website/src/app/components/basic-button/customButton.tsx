@@ -5,12 +5,16 @@ import colors from "@/app/styles/colors";
 interface CustomButtonProps {
     label: string;
     variant: "outlined" | "contained"; 
+    disabled?: boolean;
+    onClick?: () => void;
 }
 
-export default function CustomButton ({ label, variant }: CustomButtonProps) {
+export default function CustomButton ({ label, variant, disabled = false, onClick }: CustomButtonProps) {
     return (
         <Button 
             variant={variant}
+            disabled={disabled}
+            onClick={onClick}
             sx={{ 
                 borderRadius: "15px",
                 padding: "8px 20px",
