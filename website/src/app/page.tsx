@@ -4,6 +4,7 @@ import Navbar from "./components/navbar/navbar";
 import Placeholder from "./components/placeholder/placeholder";
 import Section from "./components/section/section";
 import { sectionData } from "./data/section-data";
+import FooterBanner from "./components/footer-banner/footerBanner";
 
 export default function Home() {
   return(
@@ -28,7 +29,7 @@ export default function Home() {
                 />
               ))}
             </div>
-            
+          <FooterBanner/>  
         </div>
     </div>
   );

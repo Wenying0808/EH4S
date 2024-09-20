@@ -1,4 +1,6 @@
 "use client";
+
+import "./navbar.css";
 import logoImg from "./img_logo.png";
 import React, {useState} from 'react';
 import { useRouter } from 'next/navigation';

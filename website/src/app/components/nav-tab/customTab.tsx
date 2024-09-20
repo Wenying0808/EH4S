@@ -1,6 +1,7 @@
 import React from "react";
+import "./customTab.css";
 import colors from "@/app/styles/colors";
-import { Typography } from "@mui/material";
+
 
 interface CustomTabProps {
     label: string;
@@ -9,9 +10,11 @@ interface CustomTabProps {
 
 export default function CustomTab({ label, onClick }: CustomTabProps) {
     return (
-        <Typography
+        <div
+            className="navbar-tab"
             onClick={onClick}
-            sx={{ 
+            style={{ 
+                display: "flex",
                 padding: "2px",
                 color: colors.white,
                 fontFamily: "Roboto",
@@ -19,13 +22,10 @@ export default function CustomTab({ label, onClick }: CustomTabProps) {
                 fontWeight: "500",
                 lineHeight: "21px",
                 textTransform: "capitalize",
-                "&:hover": {
-                    borderBottom: `2px solid ${colors}`,
-                },
                 cursor: "pointer",
             }}
         > 
             {label}
-        </Typography>
+        </div>
     );
 };

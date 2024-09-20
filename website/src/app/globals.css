@@ -39,6 +39,7 @@ body {
   width: 100vw;
   background-color: var(--white-color);
   display: flex;
+  flex-direction: column;
   overflow-y: auto; 
 }
 
@@ -69,14 +70,6 @@ body {
 }
 
 @media (max-width: 900px) {
-  /* navbar component*/
-  .navbar {
-      padding: 20px;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-  }
-
   .page-container{
     top: 178px;
     height: calc(100vh - 178px);
@@ -96,15 +89,8 @@ body {
 }
 
 @media (max-width: 520px) {
-  /* navbar component*/
-  .navbar-tabs {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
   .page-container{
     top: 220px;
     height: calc(100vh - 220px);
   }
-
 }

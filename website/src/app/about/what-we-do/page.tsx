@@ -1,6 +1,6 @@
 import Navbar from "@/app/components/navbar/navbar";
-import Placeholder from "@/app/components/placeholder/placeholder";
 import IntroCard from "@/app/components/intro-card/introCard";
+import FooterBanner from "@/app/components/footer-banner/footerBanner";
 import { introCardData } from "@/app/data/introcard-data";
 
 export default function WhatWeDo() {
@@ -28,6 +28,7 @@ export default function WhatWeDo() {
                         />
                     ))}
                 </div> 
+                <FooterBanner/>
             </div>
         </div>
     );
