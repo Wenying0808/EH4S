@@ -1,5 +1,6 @@
 "use client";
 import logoImg from "./img_logo.png";
+import logoImgSmall from "./img_logo without text.png";
 import React, {useState} from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
@@ -40,7 +41,7 @@ export default function Navbar (){
                 padding: "20px", 
             }}
         >
-            <Image src={logoImg} alt="logo" width={160} height={40}/>
+            <Image className="navbar-logo" src={logoImg} alt="logo" width={160} height={40}/>
             <div className="navbar-tabs" style={{ display: "flex", gap: "16px" }}>
                 <CustomTab  label="Publications" onClick={() => navigateTo('/publications')}/>
                 <CustomTab label="EH4S Platform" onClick={() => navigateTo('/eh4s')}/>

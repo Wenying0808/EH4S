@@ -20,7 +20,7 @@ export default function CustomTab({ label, onClick }: CustomTabProps) {
                 lineHeight: "21px",
                 textTransform: "capitalize",
                 "&:hover": {
-                    borderBottom: `2px solid ${colors.highlight}`,
+                    borderBottom: `2px solid ${colors}`,
                 },
                 cursor: "pointer",
             }}

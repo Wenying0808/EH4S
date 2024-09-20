@@ -34,6 +34,15 @@ a {
   text-decoration: none;
 }
 
+.navbar{
+
+}
+
+.navbar-logo-small {
+  display: none;
+}
+
+
 .page{
   margin: 0;
   padding: 0;
@@ -59,18 +68,24 @@ a {
       align-items: center;
       gap: 20px;
   }
+
   .page-container{
     top: 178px;
     height: calc(100vh - 178px);
   }
+
 }
 
-@media (max-width: 500px) {
+@media (max-width: 520px) {
+
   .navbar-tabs {
-      display: none;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  .navbar-buttons {
-      gap: 10px;
+  .page-container{
+    top: 220px;
+    height: calc(100vh - 220px);
   }
+
 }
