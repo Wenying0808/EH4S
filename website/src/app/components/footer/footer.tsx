@@ -4,7 +4,7 @@ import { sitemapData } from "@/app/data/sitemap-data";
 import SitemapColumn from "../sitemap/sitemap";
 import CustomIconButton from "../icon-button/iconButton";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import XIcon from '@mui/icons-material/X';
+import BusinessIcon from '@mui/icons-material/Business';
 
 export default function Footer() {
     return (
@@ -19,8 +19,8 @@ export default function Footer() {
                 ))}
             </div>
           <div className="footer-social-buttons">
-            <CustomIconButton label="Linkdein" icon={LinkedInIcon}/>
-            <CustomIconButton label="Twitter" icon={XIcon}/>
+            <CustomIconButton label="Linkdein" icon={LinkedInIcon} href="https://www.linkedin.com/company/hybrid-core/"/>
+            <CustomIconButton label="HybridCore Website" icon={BusinessIcon} href="https://hybridcore.eu/"/>
           </div>
           <div className="footer-rights">©  The EuroHub4Sino project. All rights reserved. </div>
         </div>
