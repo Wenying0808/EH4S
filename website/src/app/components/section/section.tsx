@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import colors from '@/app/styles/colors';
 import placeholderImg from './img_placeholder block.svg'
+
 interface SectionProps {
     title: string;
     description: string;

@@ -1,12 +1,33 @@
 import Navbar from "@/app/components/navbar/navbar";
 import Placeholder from "@/app/components/placeholder/placeholder";
+import IntroCard from "@/app/components/intro-card/introCard";
+import { introCardData } from "@/app/data/introcard-data";
 
 export default function WhatWeDo() {
     return(
         <div className="page">
             <Navbar/>
             <div className="page-container">
-                <Placeholder label="What We Do"/>
+                <div className="intro-cards" 
+                    style={{ 
+                        display: "flex",
+                        padding: "40px",
+                        alignItems: "flex-start",
+                        alignContent: "flex-start",
+                        gap: "40px",
+                        flexWrap: "wrap",
+                        maxWidth: "920px"
+                    }}
+                >
+                    {introCardData.map((intro, index) => (
+                        <IntroCard
+                        key={index}
+                        title={intro.title}
+                        description={intro.description}
+                        icon={intro.icon}
+                        />
+                    ))}
+                </div> 
             </div>
         </div>
     );
