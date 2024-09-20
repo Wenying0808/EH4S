@@ -10,7 +10,7 @@ export default function WhatWeDo() {
         <div className="page">
             <Navbar/>
             <div className="page-container">
-            <SectionPageIntro title="About us" description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."/>
+                <SectionPageIntro title="About us" description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."/>
                 <div className="intro-cards" 
                     style={{ 
                         display: "flex",

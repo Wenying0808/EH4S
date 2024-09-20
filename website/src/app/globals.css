@@ -30,13 +30,22 @@ a{
   text-decoration: none;
 }
 
+hr {
+  border: none;
+  border-top: 2px solid var(--highlight-color);
+  overflow: visible;
+  text-align: center;
+  height: 4px;
+}
+
+
+/* page styles across website */
 .page{
   margin: 0;
   padding: 0;
   height: 100vh;
   overflow: hidden;
 }
-
 .page-container{
   position: absolute;
   top: 80px;
@@ -47,8 +56,6 @@ a{
   flex-direction: column;
   overflow-y: auto; 
 }
-
-/* page under construction */
 .page-container-wip{
   display: flex;
   justify-content: center;
@@ -56,7 +63,28 @@ a{
   height: calc(100vh - 80px);
 }
 
- /* section component*/
+
+/* home page */
+.section-consortium-partners{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 60px;
+}
+.section-consortium-partners-images{
+  display: flex;
+  max-width: 800px;
+  padding: 40px;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+
+ /* section component across website*/
 .section-title{
   align-self: stretch;
   color: var(--primiary-gray-color);
@@ -74,6 +102,19 @@ a{
   font-style: normal;
   font-weight: 500;
   line-height: 32px; 
+}
+.section-divider{
+  padding: 20px 80px;
+}
+
+
+/* Home-Page Styles*/
+.section-title-center{
+  text-align: center;
+}
+.section-description-center{
+  text-align: center;
+  padding: 0 60px;
 }
 
 @media (max-width: 900px) {
@@ -95,5 +136,9 @@ a{
   .section-title{
     font-size: 36px;
     line-height: 48px; 
+  }
+  .section-description-center{
+    text-align: center;
+    padding: 0;
   }
 }
