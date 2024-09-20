@@ -1,3 +1,14 @@
+.section-metrics{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px;
+    width: 100vw;
+    background-color: var(--alabaster-color, #FAFAFA);
+}
+
 .section-objectives{
     display: flex;
     flex-direction: row;
@@ -35,6 +46,9 @@
 }
   
 @media (max-width: 520px) {
+    .section-metrics{
+        gap: 20px;
+    }
     .section-objectives{
         flex-direction: column;
     }

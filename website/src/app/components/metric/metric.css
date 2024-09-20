@@ -1,0 +1,39 @@
+.metric{
+    display: inline-flex;
+    padding: 8px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+.metric-value{
+    color: var(--calypso-color, #33658A);
+    font-family: "Roboto Slab";
+    font-size: 49px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 64px;
+}
+.metric-label{
+    color: var(--calypso-color, #33658A);
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+@media (max-width: 900px) {
+    .metric{
+        padding: 4px;
+        gap: 4px;
+    }
+    .metric-value{
+        font-size: 30px;
+        line-height: 44px;
+    }
+    .metric-label{
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
