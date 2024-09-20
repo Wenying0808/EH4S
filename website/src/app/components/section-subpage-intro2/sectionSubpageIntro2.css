@@ -1,0 +1,64 @@
+.section-subpage-intro{
+    display: flex;
+    flex-direction: column;
+    padding: 100px 60px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.section-subpage-intro-image{
+    display: flex;
+    max-width: 600px;
+}
+.section-title-highlight.center{
+    text-align: center;
+}
+.section-subpage-intro-title{
+    align-self: stretch;
+    color: var(--primiary-gray-color);
+    font-family: "Roboto Slab";
+    font-size: 49px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 64px;
+    text-align: center;
+}
+
+.section-subpage-intro-description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    color: var(--secondary-gray-color);
+    font-family: "Roboto";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    text-align: center;
+    padding: 0 120px;
+}
+
+@media (max-width: 900px) {
+    .section-subpage-intro{
+        gap: 16px;
+    }
+    .section-subpage-intro-description{
+        padding: 0 60px;
+    }
+}
+
+@media (max-width: 520px) {
+    .section-subpage-intro{
+        padding: 60px 30px;
+        gap: 10px;
+    }
+    .section-subpage-intro-title{
+        font-size: 36px;
+        line-height: 48px; 
+    }
+    .section-subpage-intro-description{
+        padding: 0px;
+    }
+}

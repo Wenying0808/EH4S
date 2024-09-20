@@ -1,16 +1,28 @@
 import Navbar from "@/app/components/navbar/navbar";
 import SectionPageIntro from "@/app/components/section-page-intro/sectionPageIntro";
+import SectionSubpageIntro2 from "@/app/components/section-subpage-intro2/sectionSubpageIntro2";
 import IntroCard from "@/app/components/intro-card/introCard";
 import FooterBanner from "@/app/components/footer-banner/footerBanner";
 import Footer from "@/app/components/footer/footer";
 import { introCardData } from "@/app/data/introcard-data";
+import SubpageIntroImg from "../../assets/About-What-We-Do/img_WWD-subpageintro.png";
+
 
 export default function WhatWeDo() {
     return(
         <div className="page">
             <Navbar/>
             <div className="page-container">
-                <SectionPageIntro title="About us" description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."/>
+                <SectionPageIntro 
+                    title="About us" 
+                    description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+                />
+                <SectionSubpageIntro2
+                    highlight="Header Highlight" 
+                    title="What We Do?" 
+                    description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna" 
+                    image={SubpageIntroImg}
+                />
                 <div className="intro-cards" 
                     style={{ 
                         display: "flex",
