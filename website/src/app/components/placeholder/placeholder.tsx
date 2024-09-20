@@ -1,3 +1,4 @@
+import "./placeholder.css";
 import colors from "@/app/styles/colors";
 import { Typography } from "@mui/material";
 import Image from "next/image";
@@ -9,16 +10,7 @@ interface PlaceholderProps {
 
 export default function Placeholder({label}: PlaceholderProps) {
     return (
-        <div
-            style={{ 
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                gap: "24px",
-                padding: "40px",
-            }}
-        >
+        <div className="placeholder">
             <Image src={placeholderImg} alt="placholder" width={280} height={280}/>
             <Typography component="h3" sx={{ color: colors.secondaryGray}}>{label} Page Placeholder</Typography>
         </div>

@@ -23,7 +23,7 @@
 
 .section-subpage-intro-title{
     align-self: stretch;
-    color: var(--primiary-gray-color);
+    color: var(--primiary-gray-color, #1E262B);
     font-family: "Roboto Slab";
     font-size: 49px;
     font-style: normal;
@@ -33,7 +33,7 @@
 
 .section-subpage-intro-description{
     align-self: stretch;
-    color: var(--secondary-gray-color);
+    color: var(--secondary-gray-color, #62676B);
     font-family: "Roboto";
     font-size: 16px;
     font-style: normal;

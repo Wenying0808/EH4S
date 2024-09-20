@@ -6,7 +6,7 @@
     align-items: center;
     gap: 20px;
 
-    background: var(--calypso-color);
+    background: var(--calypso-color, #33658A);
 }
 
 .footer-sitemap{
@@ -30,13 +30,13 @@
     gap: 10px;
     align-self: stretch;
 
-    color: var(--white-color);
+    color: var(--white-color, #FFFFFF);
     font-family: "Roboto";
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 21px; 
-    border-top: 1px solid var(--white-color);
+    border-top: 1px solid var(--white-color, #FFFFFF);
 }
 
 

@@ -8,7 +8,7 @@
     display: flex;
     padding: 16px 0px;
     align-items: center;
-    border-bottom: 2px solid var(--highlight-color);
+    border-bottom: 2px solid var(--highlight-color, #F6AE2D);
 
     color: var(--white-color);
     font-family: "Roboto Slab";
@@ -28,5 +28,5 @@
     align-items: center;
 }
 .sitemap-column-tab-label{
-    color: var(--white-color);
+    color: var(--white-color, #FFFFFF);
 }
