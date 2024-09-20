@@ -1,3 +1,4 @@
+import "./whatwedo.css";
 import Navbar from "@/app/components/navbar/navbar";
 import SectionPageIntro from "@/app/components/section-page-intro/sectionPageIntro";
 import SectionSubpageIntro2 from "@/app/components/section-subpage-intro2/sectionSubpageIntro2";
@@ -20,29 +21,29 @@ export default function WhatWeDo() {
                 <SectionSubpageIntro2
                     highlight="Header Highlight" 
                     title="What We Do?" 
-                    description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna" 
+                    description="China is a key global actor and a leading economic and technological power. China’s increasing relevance in the geopolitical system, its various specificities, complexities, and goals as well as its rapid evolution and new policy directions pose challenge to the EU’s capacity to better understand contemporary China. Besides, the EU needs to get to know and understand China on its own terms: not through the lens of other external sources but from its own European perspective." 
                     image={SubpageIntroImg}
                 />
-                <div className="intro-cards" 
-                    style={{ 
-                        display: "flex",
-                        padding: "40px",
-                        alignItems: "flex-start",
-                        alignContent: "flex-start",
-                        gap: "40px",
-                        flexWrap: "wrap",
-                        maxWidth: "920px"
-                    }}
-                >
-                    {introCardData.map((intro, index) => (
-                        <IntroCard
-                        key={index}
-                        title={intro.title}
-                        description={intro.description}
-                        icon={intro.icon}
-                        />
-                    ))}
-                </div> 
+
+                <div className="section-objectives">
+                    <div className="section-objectives-intro">
+                        <div className="section-title-highlight">Section Highlight</div>
+                        <div className="section-title">Objectives</div>
+                        <div className="section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</div>
+                    </div>
+                    <div className="section-objectives-intro-cards">
+                        {introCardData.map((intro, index) => (
+                            <IntroCard
+                            key={index}
+                            title={intro.title}
+                            description={intro.description}
+                            icon={intro.icon}
+                            />
+                        ))}
+                    </div> 
+                </div>
+
+
                 <FooterBanner/>
                 <Footer/>
             </div>
