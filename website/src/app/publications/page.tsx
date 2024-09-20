@@ -5,7 +5,7 @@ export default function Publications() {
   return(
     <div className="page">
         <Navbar/>
-        <div className="page-container">
+        <div className="page-container wip">
             <Placeholder label="Publications"/>
         </div>
     </div>
