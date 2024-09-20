@@ -1,4 +1,5 @@
 import Navbar from "../components/navbar/navbar";
+import SectionPageIntro from "../components/section-page-intro/sectionPageIntro";
 import Placeholder from "../components/placeholder/placeholder";
 import Footer from "@/app/components/footer/footer";
 
@@ -7,10 +8,11 @@ export default function Newsletter() {
     <div className="page">
       <Navbar/>
       <div className="page-container">
-          <div className="page-container-wip">
-              <Placeholder label="Newsletter"/>
-          </div>
-          <Footer/>
+        <SectionPageIntro title="Newsletter" description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."/>
+        <div className="page-container-wip">
+            <Placeholder label="Newsletter"/>
+        </div>
+        <Footer/>
       </div>
     </div>
   );
