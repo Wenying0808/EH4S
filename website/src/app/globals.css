@@ -79,6 +79,7 @@ hr {
   padding: 40px;
   align-items: flex-start;
   align-content: flex-start;
+  justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
 }
@@ -100,6 +101,15 @@ hr {
   font-style: normal;
   font-weight: 500;
   line-height: 64px; 
+}
+.section-title-highlight{
+  align-self: stretch;
+  color: var(--highlight-color);
+  font-family: "Roboto";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21px; 
 }
 .section-description{
   align-self: stretch;

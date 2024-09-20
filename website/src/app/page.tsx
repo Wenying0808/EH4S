@@ -2,12 +2,13 @@
 
 import Navbar from "./components/navbar/navbar";
 import SectionPageIntro from "./components/section-page-intro/sectionPageIntro";
+import SectionSubpageIntro from "./components/section-subpage-intro/sectionSubpageIntro";
 import Section from "./components/section/section";
 import { sectionData } from "./data/section-data";
-import { Divider } from "@mui/material";
 import FooterBanner from "./components/footer-banner/footerBanner";
 import Footer from "./components/footer/footer";
 import Image from "next/image";
+import SubpageIntroImg from "./assets/About-Who-We-Are/img_WWA-subpageIntro.png";
 import WWAImg1 from './assets/About-Who-We-Are/section-images/img_WWA-1.png';
 import WWAImg2 from './assets/About-Who-We-Are/section-images/img_WWA-2.png';
 import WWAImg3 from './assets/About-Who-We-Are/section-images/img_WWA-3.png';
@@ -26,7 +27,16 @@ export default function Home() {
     <div className="page">
         <Navbar/>
         <div className="page-container">
-          <SectionPageIntro title="About us" description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."/>
+          <SectionPageIntro 
+            title="About us" 
+            description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+          />
+          <SectionSubpageIntro  
+            highlight="Header Highlight" 
+            title="Who we are?" 
+            description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna" 
+            image={SubpageIntroImg}
+          />
           <div className="section-map">
             <Image src={WWAImgMap} alt="map" width={974} height={455} layout="responsive"/>
           </div>

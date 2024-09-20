@@ -11,7 +11,7 @@ interface SectionProps {
     image: StaticImageData;
 }
 
-export default function Section ({ title, description, imgPosition, image}: SectionProps){
+export default function Section ({ title, description, imgPosition, image }: SectionProps){
     return (
         <div 
             className="section" 
