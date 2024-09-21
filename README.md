@@ -7,6 +7,7 @@ EH4S Website
 First, run the development server:
 
 ```
+# main branch
 # open the website folder
 cd website
 
