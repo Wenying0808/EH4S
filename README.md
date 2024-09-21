@@ -24,6 +24,8 @@ npm run dev
 
 ## Technologies
 
+- Next.js
+- Material UI
 - React
 - TypeScript
 - Styled Components
