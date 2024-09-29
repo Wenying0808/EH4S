@@ -1,6 +1,6 @@
-import Navbar from "../components/navbar/navbar";
-import SectionPageIntro from "../components/section-page-intro/sectionPageIntro";
-import Placeholder from "../components/placeholder/placeholder";
+import Navbar from "@/app/components/navbar/navbar";
+import SectionPageIntro from "@/app/components/section-page-intro/sectionPageIntro";
+import Placeholder from "@/app/components/placeholder/placeholder";
 import Footer from "@/app/components/footer/footer";
 
 export default function Secret() {

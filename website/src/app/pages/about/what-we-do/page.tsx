@@ -8,7 +8,7 @@ import IntroCard from "@/app/components/intro-card/introCard";
 import FooterBanner from "@/app/components/footer-banner/footerBanner";
 import Footer from "@/app/components/footer/footer";
 import { introCardData } from "@/app/data/introcard-data";
-import SubpageIntroImg from "../../assets/About-What-We-Do/img_WWD-subpageintro.png";
+import SubpageIntroImg from "@/app/assets/About-What-We-Do/img_WWD-subpageintro.png";
 
 
 export default function WhatWeDo() {
