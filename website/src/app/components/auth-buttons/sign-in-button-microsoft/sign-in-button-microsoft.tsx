@@ -1,16 +1,16 @@
 "use client"
 
 import { Button } from "@mui/material";
-import GoogleIcon from '@mui/icons-material/Google';
+import MicrosoftIcon from '@mui/icons-material/Microsoft';
 import { signInWithGoogle } from "../auth-actions";
 import { useTransition } from 'react';
 import colors from "@/app/styles/colors";
 
-interface SignInGoogleButtonProps {
+interface SignInMicrosoftButtonProps {
   disabled: boolean
 }
  
-export default function SignInGoogleButton( { disabled }: SignInGoogleButtonProps) {
+export default function SignInoMicrosoftButton( { disabled }: SignInMicrosoftButtonProps) {
   const [isPending, startTransition] = useTransition()
   return (
     <Button
@@ -20,9 +20,9 @@ export default function SignInGoogleButton( { disabled }: SignInGoogleButtonProp
             variant="contained"
             type="submit"
             sx={{ mt: 2, backgroundColor: colors.calypso }}
-            startIcon={<GoogleIcon />}
+            startIcon={<MicrosoftIcon />}
     >
-      {isPending ? 'Signing in...' : 'Continue with Google'}
+      {isPending ? 'Signing in...' : 'Continue with Microsoft'}
     </Button>
   )
 } 

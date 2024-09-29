@@ -1,4 +1,3 @@
-
 import CustomButton from "../../basic-button/customButton";
 import { signOut } from "next-auth/react"
 import { useSession } from "next-auth/react";

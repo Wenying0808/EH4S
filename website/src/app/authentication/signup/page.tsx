@@ -2,16 +2,15 @@
 
 import React, { useState } from 'react';
 import colors from '@/app/styles/colors';
-import { TextField, Button, Box, Typography } from '@mui/material';
-import MicrosoftIcon from '@mui/icons-material/Microsoft';
+import { TextField, Box, Typography } from '@mui/material';
 import SignInGoogleButton from '@/app/components/auth-buttons/sign-in-button-google/sign-in-button-google'; 
+import SignInoMicrosoftButton from '@/app/components/auth-buttons/sign-in-button-microsoft/sign-in-button-microsoft';
 
 export default function SignUp(){
   const [company, setCompany] = useState('');
   const [jobPosition, setJobPosition] = useState('');
 
   const isFormFilled = jobPosition.trim() !== '' && company.trim() !== '';
-
 
   return (
     <div className="page-signup" style={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center"}}>
@@ -40,16 +39,8 @@ export default function SignUp(){
           onChange={(e) => setCompany(e.target.value)}
           margin="normal"
         />
-        <SignInGoogleButton/>
-        <Button
-          fullWidth
-          variant="contained"
-          disabled={!isFormFilled}
-          sx={{ mt: 2, backgroundColor: colors.calypso }}
-          startIcon={<MicrosoftIcon />}
-        >
-          Connect with Microsoft
-        </Button>
+        <SignInGoogleButton disabled={!isFormFilled}/>
+        <SignInoMicrosoftButton disabled={true}/>
       </Box>
     </div>
   );
