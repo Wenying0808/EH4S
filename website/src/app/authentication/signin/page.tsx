@@ -1,24 +1,12 @@
-"use client";
+/*"use client";*/
 
 import React from 'react';
 import colors from '@/app/styles/colors';
 import { Button, Box, Typography } from '@mui/material';
-import { useRouter } from 'next/navigation';
-import GoogleIcon from '@mui/icons-material/Google';
 import MicrosoftIcon from '@mui/icons-material/Microsoft';
+import SignInGoogleButton from '@/app/components/auth-buttons/sign-in-button-google/sign-in-button-google'; 
 
-export default function SignIn(){
-  const router = useRouter();
-
-  const handleGoogleSignIn = () => {
-    // Implement Google authentication logic here
-    router.push('/api/auth/google');
-  };
-
-  const handleMicrosoftSignIn = () => {
-    // Implement Microsoft authentication logic here
-    router.push('/api/auth/microsoft');
-  };
+export default async function SignIn(){
 
   return (
     <div className="page-signup" style={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center"}}>
@@ -33,19 +21,10 @@ export default function SignIn(){
             }}
         >
         <Typography variant="h4" gutterBottom>Sign In</Typography>
+        <SignInGoogleButton/>
         <Button
             fullWidth
             variant="contained"
-            onClick={handleGoogleSignIn}
-            sx={{ mt: 2, backgroundColor: colors.calypso }}
-            startIcon={<GoogleIcon />}
-        >
-            Connect with Gmail
-        </Button>
-        <Button
-            fullWidth
-            variant="contained"
-            onClick={handleMicrosoftSignIn}
             sx={{ mt: 2, backgroundColor: colors.calypso }}
             startIcon={<MicrosoftIcon />}
         >

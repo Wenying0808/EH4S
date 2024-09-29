@@ -3,26 +3,15 @@
 import React, { useState } from 'react';
 import colors from '@/app/styles/colors';
 import { TextField, Button, Box, Typography } from '@mui/material';
-import { useRouter } from 'next/navigation';
-import GoogleIcon from '@mui/icons-material/Google';
 import MicrosoftIcon from '@mui/icons-material/Microsoft';
+import SignInGoogleButton from '@/app/components/auth-buttons/sign-in-button-google/sign-in-button-google'; 
 
 export default function SignUp(){
   const [company, setCompany] = useState('');
   const [jobPosition, setJobPosition] = useState('');
-  const router = useRouter();
 
   const isFormFilled = jobPosition.trim() !== '' && company.trim() !== '';
 
-  const handleGoogleSignUp = () => {
-    // Implement Google authentication logic here
-    router.push('/api/auth/google');
-  };
-
-  const handleMicrosoftSignUp = () => {
-    // Implement Microsoft authentication logic here
-    router.push('/api/auth/microsoft');
-  };
 
   return (
     <div className="page-signup" style={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center"}}>
@@ -51,20 +40,10 @@ export default function SignUp(){
           onChange={(e) => setCompany(e.target.value)}
           margin="normal"
         />
+        <SignInGoogleButton/>
         <Button
           fullWidth
           variant="contained"
-          onClick={handleGoogleSignUp}
-          disabled={!isFormFilled}
-          sx={{ mt: 2 , backgroundColor: colors.calypso }}
-          startIcon={<GoogleIcon />}
-        >
-          Connect with Gmail
-        </Button>
-        <Button
-          fullWidth
-          variant="contained"
-          onClick={handleMicrosoftSignUp}
           disabled={!isFormFilled}
           sx={{ mt: 2, backgroundColor: colors.calypso }}
           startIcon={<MicrosoftIcon />}
