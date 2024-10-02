@@ -30,11 +30,11 @@ export default function Navbar (){
     };
 
     const handleSignUp = () => {
-        navigateTo('/authentication/signup');
+        navigateTo('/pages/authentication/signup');
     };
 
     const handleSignIn = () => {
-        navigateTo('/authentication/signin');
+        navigateTo('/pages/authentication/signin');
     };
 
     return (
