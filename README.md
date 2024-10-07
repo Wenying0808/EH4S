@@ -40,3 +40,5 @@ npm run dev
 - Create Mock Data
 - Reuse Components
 - Testing
+
+![Process Img](/process.png)
