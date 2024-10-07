@@ -9,7 +9,6 @@
 .section-img{
   display: flex;
   align-items: flex-start;
-  flex-direction: row;
   width: 500px;
 }
 .section-intro{
